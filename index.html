@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raj_to_do_list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container">
+        <div class="name">
+            <h1>To-Do List</h1>
+        </div>
+        <div class="inp">
+           <form action="">
+            <input type="text" name="" id="input" placeholder="add your task" required>
+            <button>Add</button>
+           </form>
+        </div>
+        <div class="task-container">
+            <ul>
+              
+            </ul>
+        </div>
+    </div>
+    <script>
+        const inpTask = document.querySelector("#input");
+        const taskList = document.querySelector(".task-container ul");
+        const addbutton = document.querySelector(".inp button");
+        addbutton.addEventListener("click", () =>{
+            const taskText = inpTask.value;
+            if (taskText!== "") {
+                const listItem = document.createElement("li");
+                listItem.className = "task"; 
+
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.id = "checkbox";
+                
+                
+                const listText = document.createElement("p");
+                listText.className = "task-list"
+                listText.textContent = taskText;
+                
+                
+                
+                const delButton = document.createElement("button");
+                delButton.className = "remove";
+                delButton.textContent = "delet";
+                
+                
+                listItem.appendChild(checkbox);
+                listItem.appendChild(listText);
+                listItem.appendChild(delButton);
+
+                taskList.appendChild(listItem);
+
+                inpTask.value = "";
+
+                delButton.addEventListener("click", () => {
+                    listItem.remove();
+                });
+
+                checkbox.addEventListener("change", () => {
+                    listItem.classList.toggle("checked", checkbox.checked);
+                });
+
+            }
+        });
+    </script>
+    
+</body>
+</html>

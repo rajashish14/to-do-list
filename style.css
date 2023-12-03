@@ -1,0 +1,123 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+.container{
+    min-height: 90%;
+    width: 500px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 40px 35px;
+    text-align: center;   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.inp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10px;
+    background-color: rgb(195, 184, 170);
+    border: none;
+    width: 80%;
+    height: 30px;
+    border-radius: 59px;
+    outline: none;
+}
+.inp form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10px;
+    background-color: rgb(195, 184, 170);
+    border: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 59px;
+
+}
+
+#input{
+    background-color: rgb(195, 184, 170);
+    border: none;
+    width: 80%;
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 59px;
+    outline: none;
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: 500;
+    font-size: medium;
+}
+.inp button{
+    width: 20%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(201, 79, 156);
+    cursor: pointer;
+    color: #fff;
+}
+.inp button:hover{
+    background-color: rgb(158, 90, 142);
+    color: white;
+    font-weight: 700;
+}
+.task-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+}
+.task-container ul{
+    width: 100%;
+}
+.task{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+}
+#checkbox{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    margin-top: 16px;
+    border: none;
+    
+}
+.remove{
+    height: 30px;
+    width: 58px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 500;
+    background-color: rgb(169, 108, 29);
+    border: none;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: rgb(182, 153, 79);
+}
+.checked .task-list {
+    text-decoration: line-through;
+    
+}
+
+
